@@ -1,2 +1,5 @@
-def main() -> None:
-    print("Hello from dreimire!")
+from flask import Flask
+
+app = Flask(__name__)
+
+from dreimire import routes
