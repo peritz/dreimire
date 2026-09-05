@@ -26,3 +26,10 @@ further attention to detail. This includes:
 - Understanding the effect of an increase in pension on my income
 - Understanding the effect of an increase in salary on my take-home pay
 - Analysing compensation packages and benefits changes or propositions
+
+## Plan
+
+The plan is to create a Flask app according to the tutorial at 
+https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+As I go I will edit it as I need to in order to create an application.
