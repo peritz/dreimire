@@ -1,3 +1,5 @@
+import sqlalchemy as sa
+import sqlalchemy.orm as so
 from flask import Flask
 from flask_migrate import Migrate
 from flask_sqlalchemy import SQLAlchemy
@@ -9,4 +11,10 @@ app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
-from dreimire import models, routes
+from dreimire import routes
+from dreimire.models import Budget, User
+
+
+@app.shell_context_processor
+def make_shell_context():
+    return {"sa": sa, "so": so, "User": User, "Budget": Budget}
