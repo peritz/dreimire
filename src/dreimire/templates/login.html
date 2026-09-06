@@ -1,5 +1,11 @@
 {% extends "layouts/unauth-base.html" %}
+{% import "partials/forms.html" as wtf %}
 
+{% block content %}
+    {{ wtf.quick_form(form) }}
+{% endblock %}
+
+{#
 {% block content %}
   <form action="" method="post" novalidate>
     {{ form.hidden_tag() }}
@@ -33,3 +39,4 @@
     <div>{{ form.submit(class="btn btn-primary") }}</div>
   </form>
 {% endblock %}
+#}

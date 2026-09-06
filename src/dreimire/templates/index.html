@@ -1,5 +1,13 @@
 {% extends "layouts/auth-base.html" %}
 
 {% block content %}
-    <h1>Hello, {{ user.username }}</h1>
+    <h1>Hello, {{ current_user.username }}!</h1>
+    <h2>Budget Summary</h2>
+    {% for budget in budgets %}
+        <div>
+            <h3>{{ budget.name }}</h3>
+            <p>Amount: {{ budget.amount }}, Period: {{ budget.period }}</p>
+            <p>{{ budget.description }}</p>
+        </div>
+    {% endfor %}
 {% endblock %}

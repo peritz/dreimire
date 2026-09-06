@@ -5,7 +5,16 @@
   </head>
   <body>
     <div>
-      <div class="position-absolute top-50 start-50 translate-middle card text-center">
+        {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <i class="bi bi-exclamation-triangle-fill"></i>
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endwith %}
+      <div class="position-absolute top-50 start-50 translate-middle card w-25 text-center">
         <div class="card-body">
           <h5 class="card-title">Authentication</h5>
           <div id="auth-panel">
