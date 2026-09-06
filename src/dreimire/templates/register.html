@@ -1,11 +1,12 @@
 {% extends "layouts/unauth-base.html" %}
 {% import "partials/forms.html" as wtf %}
 
+{% block title %}Register{% endblock %}
+
 {% block content %}
     {{ wtf.quick_form(form) }}
 {% endblock %}
 
 {% block footer %}
-    Not registered yet? <a href="{{ url_for("register") }}">Create an account</a>
+    Already registered? <a href="{{ url_for("login") }}">Login</a>
 {% endblock %}
-
